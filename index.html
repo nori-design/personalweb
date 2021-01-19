@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+
+<link rel="icon" href="logo.ico" type="image/x-icon">  
+
+ <link rel="shortcut icon" href="logo.ico" type="image/x-icon">  
+
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+	<title>NORI DESIGN</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/resat.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+
+    <script>
+    $(function(){
+        var $mlNav = $('.navbox');
+        $('#hmpage').fullpage({
+            verticalCentered:true,
+            resize:false,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            menu: '#navPage',
+            scrollOverflow: false,
+            afterLoad: function(anchorLink, index){
+                $("#fp-nav ul li").eq(index-1).addClass("active");
+                if(index != 1){
+                    $('header').addClass("active");
+                }
+				if(index == 2){$('.counter').countUp({time:1000});}
+                if(index == 8){
+                    $('.mbox8Bg').addClass("cut");
+                }
+                if(index ==9){
+                    $("#navPage").addClass("noactive");
+                }
+            },
+            onLeave: function(index, nextIndex, direction){
+                if(index != 1){
+                    $('header').removeClass("active");
+                }
+                if(index == 8 && direction == 'up'){
+                    $('.mbox8Bg').removeClass("cut");
+                }
+                if(index ==9){
+                    $("#navPage").removeClass("noactive");
+                }
+            }
+        });
+		setTimeout(function(){$("#hmpage").css("opacity",1);},10);     
+    });
+    </script>
+	<!--[if IE]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>html{ overflow:hidden;}</style>
+<!-- netconst.com Baidu tongji analytics -->
+
+</head>
+
+<body>
+
+<!-- <div class="menuBg">
+	<div class="menuBtn">
+    	<img src="images/Menu.png">
+    </div>
+
+</div> -->
+<header class="headerBg">
+	<div class="header">
+    	<div class="logo">
+            <a href="index.html">
+                <img src="images/logo1.png" class="img-responsive shows">
+                <img src="images/logo2.png" class="img-responsive hides">
+            </a>
+        </div>
+
+    </div>
+</header>
+
+
+<script type="text/javascript" src="js/search_common.js"></script>
+<div id="hmpage">
+    <div class="section">   
+    	<div class="mbox mbox1">
+        	<div class="swiper-container">
+            	<div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<div class="banImg">
+                            <div class="imgBg">
+                                <img src="images/banner02.jpg">
+                            </div>
+                        </div>
+                        <div class="banText2">
+                        	<div class="banTextCn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                               <!--  <img src="images/logo-1.png" class="img-responsive"> -->
+                            </div>
+                        	<div class="banTextEn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                                <img src="images/banTextEn2.png" class="img-responsive">
+                            </div>
+                        </div>
+
+                        <div class="imgBg"></div>
+                        <div class="banImg">
+                            <div class="mbox1bg">
+                            <div class="banText2">
+                                <div class="banTextCn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                                </div>
+                                <div class="banTextEn2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                                    <img src="images/banTextEn2.png" class="img-responsive">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                	<div class="swiper-slide">
+                    	<div class="banImg">
+                            <div class="imgBg">
+                                <img src="images/banner01.jpg">
+                            </div>
+                        </div>
+                    </div>
+             </div>
+         </div>
+    </div>
+</div>
+
+
+<div class="section mbox2Bg">
+	<div class="mbox mbox2">
+		<div class="box2ImgBg">
+            <div class="imgBg">
+                <img src="images/about.jpg">
+                <div class="skill">
+                    <p>影像處理：Photoshop、Illustrator、Adobe XD</p>
+                    <p>網頁前端：HTML5、CSS、Bootstrap、jQuery</p>
+                    <p>影片剪輯：Premiere、After Effects</p>
+
+                </div>
+            </div>
+        </div> 
+        <div class="mbox2Text">
+            <h3 class="mbox2TitEn">ABOUT ME</h3>
+            <h3 class="mbox2TitCn">您好，我是NORI</h3>
+            <div class="mbox2Brief">
+            <!-- 
+                <p>Web/UI/UX Designer </p>
+                <p>Graphic Designer </p>
+                <p>Illustrator </p>
+                <p>Photographer</p> -->
+            </div>
+
+            <div class="mbox2Bot list-unstyled list-inline">
+<!--                 	<li>
+            	<a href="javascript:;">
+                	<div class="mbox2Img"><img src="images/mbox2Img1.png" class="img-responsive"></div>
+                    <h3 class="mbox2BotH3">平面設計</h3>	
+                </a> -->
+                <p>
+                我叫Nori，1995 年出生，畢業於 輔仁大學 大眾傳播學系<br>
+                興趣多元且樂於學習、勇於挑戰<br>
+                認為人生沒有一條路是白走的，所有的經驗都是未來的養分<br>
+                <br>
+                大二開始進入企業學習商品攝影與平面設計<br>
+                從攝影到電商Banner，在到目前的CIS、網頁設計<br>
+                近期開始學習網頁前端與UI UX<br>
+                <!-- 喜歡風格為浪漫、簡約、日系<br> -->
+                </p>
+
+                <a class="resume" target="_blank" href="https://www.cakeresume.com/503041543">
+                    <div>Resume</div>
+                </a>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+  
+<div class="section mbox4Bg">
+	<div class="mbox4LefBtn visible-sm visible-xs">
+        <i class="fa fa-th-large"></i>
+    </div>
+	<div class="mbox4Lef">
+    	<div class="mbox4LefCon">
+            <div class="mbox4Tit">
+                <h3 class="mbox2TitEn">WORKS</h3>
+                <h3 class="mbox2TitCn">我的作品</h3>
+                <!-- <div class="mbox3Brief"></div> -->
+            </div>
+            <ul class="mbox4LefItem list-unstyled">
+        		<li><a href="#">
+                    <span class="filter" data-filter="sort1">平面設計</span>
+                    <i class="mbox4LefLine"></i>
+                </a></li>
+
+        		<li><a href="#">
+                    <span class="filter" data-filter="sort2">網頁設計</span>
+                    <i class="mbox4LefLine"></i>
+                </a></li>
+        		<li><a href="#">
+                    <span class="filter" data-filter="sort3">動畫繪畫</span>
+                    <i class="mbox4LefLine"></i>
+                </a></li>
+        		<li><a href="#">
+                    <span class="filter" data-filter="sort4">攝影作品</span>
+                    <i class="mbox4LefLine"></i>
+                </a></li>
+            </ul>
+    <!--         <a class="mbox4More" href="#">SEE ALL<div class="mbox4MoreIco"></div></a> -->
+        </div>
+    </div>  
+	<div class="mbox mbox4">
+		<div class="mbox4List">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://nori-design.github.io/-liuli2021/">
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/9.jpg" title="網頁RWD設計+切版+攝影獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">六璃迷你酒網頁設計</h3>
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.behance.net/gallery/107732071/_" >
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/1.jpg" title="CIS設計獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text" data-cat="sort3">
+                                <h3 class="ellipsis">原民族語言基金會提案</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.behance.net/gallery/111665103/Aspeed-" >
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/2.jpg" title="品牌包裝設計獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">Aspeed時尚女性品牌</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.behance.net/gallery/106260527/Milky?tracking_source=search_projects_published_date%7CMILKY" >
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/11.jpg" title="CIS設計獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">Milky哞克甜點</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.behance.net/gallery/110963173/SABER-TOOTHER-GAMING-LOGO">
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/5.jpg" title="商標設計獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">電競團隊LOGO</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.behance.net/gallery/111664547/-BANNER" >
+                            <div class="mbox4Img imgBg">
+                                <img src="../DESIGN/1909-aspeed/SALE.jpg" title="獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">電商平台BANNER</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="hhttps://drive.google.com/drive/folders/1TgwxafWFttL5fMQ01gbGcpPG_a-ZlCIE?usp=sharing">
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/10.jpg" title="明信片" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">插畫繪圖</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://drive.google.com/drive/folders/14ScT7y071JuHjlw2YqOpZQCzWm27rQFK?usp=sharing" >
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/8.jpg" title="包裝設計獨立完成" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis">輕燒酌酒標提案</h3>
+                            </div>
+                        </a>
+                    </div>
+             
+
+                    <div class="swiper-slide">
+                        <a class="mbox4Link" target="_blank" href="https://www.facebook.com/WalkingZoneEngland/photos/1150634554992313">
+                            <div class="mbox4Img imgBg">
+                                <img src="images/WORKS/4.jpg"  title="配合產品設計師" title=" 台北時尚展" class="img-responsive">
+                            </div>
+                            <!-- <div class="mbox4Ico"></div> -->
+                            <div class="mbox4Text">
+                                <h3 class="ellipsis"> 台北時尚展</h3>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+<!--             <span class="mbox4Btn mbox4Prev"><i class="fa fa-angle-left"></i></span>
+            <span class="mbox4Btn mbox4Next"><i class="fa fa-angle-right"></i></span> -->
+        </div>
+    </div>
+</div>
+
+
+    <!-- ---------------------聯絡--------------------- -->
+  
+    <div class="section mbox8Bg">   
+    	<div class="mbox mbox8">
+        	<div class="mbox8Wrap">
+
+            	<div class="mbox8Right">
+                	<h2 class="mbox2TitEn">CONTACT</h2>
+                    <h3 class="mbox2TitCn">歡迎聯絡</h3>
+                    <p class="mbox8RigTip">若有合作意向，歡迎使用E-mail與我聯繫，收到您的來信後會盡快與您聯絡，謝謝您</p>
+                    <ul class="mbox8RigCon list-unstyled list-inline">
+                    	<li>
+                        	<div class="mbox8RigIco">
+                                <img src="images/mbox8RigIco2.png" class="img-responsive"></div>
+                        	<!-- <p>LINE</p> -->
+                            <p>felice1022</p>
+                      </li>
+                    	<li>
+                        	<div class="mbox8RigIco">
+                                <img src="images/mbox8RigIco3.png" class="img-responsive"></div>
+                        	<!-- <p>EMAIL</p> -->
+                            <p>503041543@gapp.fju.edu.tw</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--homepage-->
+<ul id="navPage" class="list-unstyled">
+    <li class="active" data-menuanchor="page1"><a href="#page1"><i>H</i><span>OME</span></a></li>
+    <li data-menuanchor="page2"><a href="#page2"><i>A</i><span>BOUT</span></a></li>
+    <li data-menuanchor="page3"><a href="#page3"><i>W</i><span>ORK</span></a></li>
+    <li data-menuanchor="page4"><a href="#page4"><i>C</i><span>ONTACT</span></a></li>
+</ul><!--navPage-->
+
+<script src="js/jquery.parallaxmouse.min.js"></script>
+<!-- <script>
+	$(window).parallaxmouse({
+		//invert: true,
+		//range: 400,
+		elms: [
+			{el: $('.ban3Ico1'), rate: 0.1},
+			{el: $('.ban3Ico2'), rate: 0.3},
+			{el: $('.ban3Ico3'), rate: 0.5},
+		]
+	});
+</script> -->
+</body>
+</html>
+!
