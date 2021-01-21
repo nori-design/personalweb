@@ -397,33 +397,42 @@
 			animation:animatedBg 10s linear infinite
 		}*/
 		.banText2{
-			padding-top: 200px;
+			/*padding-top: 200px;*/
 			position:absolute;
 			top:50%;
 			left:50%;
 			z-index:1;
 			margin:-334px 0 0 -334px;
 			width:668px;height:668px}
-		.banTextCn2,
-		.banTextEn2{
+		.banTextCn3,.banTextEn3{
 			position:absolute;
-			top:0;right:0;bottom:0;left:0}
-		/*.banTextCir{
-			position:absolute;
-			top:0;
-			right:0;
-			bottom:0;
-			left:0;
-			background:url(../images/banIco2.png) center center no-repeat;
-			background-size:cover}*/
-		/*.banLine2{
-			position:absolute;
-			width:0;height:0;
-			background:url(../images/ban2Line.png) center center no-repeat;
-			background-size:cover;
-			transition:all .5s ease 1.5s;*/
-			/*animation:Yopacity 3s linear infinite .8s*/
+			top:0;right:0;bottom:0;left:0;
 		}
+
+		.banText2 img{
+			width: 100%;
+			display: flex;
+			align-content: center;
+			padding-top: 200px;
+
+		}
+
+		.banTextCn3 img{
+			width: 50px;
+			margin: 0 auto;
+			position: absolute;
+			top:150px;
+			left: 50%;		}
+		.img-down{
+			animation: change 1.5s ease-in 1s infinite;
+		}
+		@keyframes change{
+ 		   from{ top:150px;opacity: 1}
+    		to{ top:170px;opacity: .3}
+}
+from 就是0%，to 為100%。
+
+
 		.swiper-slide-active 
 		.banLine2{
 			width:100%;
@@ -1597,7 +1606,7 @@
 			.ban1Line{margin:10px 0}
 			.banTextCir{display:none}
 			.banText2{
-				margin:0;margin-left:5%;
+				margin:0 auto;
 				width:90%;
 				transform:translate(-50%,-50%)}
 			.mbox2TitEn{font-size:26px}
