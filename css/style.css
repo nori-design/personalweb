@@ -1137,10 +1137,11 @@ from 就是0%，to 為100%。
 				line-height:26px}
 			.mbox8RigCon{
 				margin:0 auto;
-				max-width:520px;font-size:0}
+				max-width:600px;
+				font-size:0}
 			.mbox8RigCon li{
 				padding:5px;
-				width:50%;
+				width:33.3%;
 				vertical-align:top;
 				font-size:13px;
 				line-height:2;
